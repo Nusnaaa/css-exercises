@@ -2,28 +2,84 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex: 1;                                            /* from solution */
+  flex-direction: column;
+  /* justify-content: space-between; */               /* incorrect, removed due to solution */
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
 }
+
+/* From Solution */
+body {
+  flex: 1;
+  display: flex;
+}
+/* end of "from solution" */
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  gap: 8px;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  /* display: flex;
+  align-items: stretch; */                  /* from solution */
+  flex-shrink: 0;
+  padding: 16px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;              /* from solution */
+  padding: 0;             /* from solution */
+}
+
+/* From Solution */
+li {
+  margin-bottom: 16px;
+}
+/* end of "from solution" */
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 32px;
+
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  width: 300px;
+  margin: 16px;     /* from solution */
+  padding: 16px;    /* from solution */
 }
